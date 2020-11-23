@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../stylesheet/App.scss';
+import getDataFromApi from '../services/getDataFromApi';
+// import Header from './Header';
+// import Filters from './Filters';
+import CharacterList from './CharacterList';
 
-class App extends React.Component {
-  //   constructor(props) {
-  //     super(props);
-  //   }
+const App = () => {
+  const [characters, setCharacters] = useState({});
 
-  render() {
-    return (
-      <div className="App">
-        <h1>Hola</h1>
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    getDataFromApi().then((data) => {
+      setCharacters(data);
+    });
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>Hola</h1>
+      {/* <Header></Header>
+      <Filters></Filters> */}
+      {/* <CharacterList characters={characters}></CharacterList> */}
+    </div>
+  );
+};
 
 export default App;
 
