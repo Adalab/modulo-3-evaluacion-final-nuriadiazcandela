@@ -6,6 +6,8 @@ import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import nofound from '../images/404.png';
+import PropTypes from 'prop-types';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -14,45 +16,41 @@ const App = () => {
   useEffect(() => {
     getDataFromApi().then((data) => {
       setCharacters(data);
-      // console.log(characters);
     });
   }, []);
 
   const handleFilter = (filterName) => {
     setFilterName(filterName);
-    // console.log(filterName);
   };
 
   const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(filterName.toUpperCase());
+    return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
-
-  // console.log(filteredCharacters);
 
   const renderCharacter = (props) => {
     const routeCharacterId = parseInt(props.match.params.id);
-    console.log(props.match.params.id);
-    console.log(characters);
     const foundCharacter = characters.find((character) => {
-      return routeCharacterId === parseInt(character.id);
+      return routeCharacterId === character.id;
     });
-    console.log(foundCharacter);
 
     if (foundCharacter) {
       return (
         <CharacterDetail
-          id={foundCharacter.id}
           image={foundCharacter.image}
           name={foundCharacter.name}
           status={foundCharacter.status}
-          specie={foundCharacter.species}
-          // planet={foundCharacter.origin.name}
+          species={foundCharacter.species}
+          origin={foundCharacter.origin}
           episodes={foundCharacter.epidose}
-          type={foundCharacter.type}
         ></CharacterDetail>
       );
     } else {
-      return <p>Personaje no encontrado</p>;
+      return (
+        <div className="nofound">
+          <h2>El personaje que buscas no existe</h2>
+          <img className="imgnofound" src={nofound} alt="no found" />
+        </div>
+      );
     }
   };
 
@@ -61,13 +59,15 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Filters handleFilter={handleFilter} />
+          <Filters handleFilter={handleFilter} filterName={filterName} />
           <CharacterList characters={filteredCharacters} />
         </Route>
-        <Route path="/character-detail/:id" component={renderCharacter}></Route>
+        <Route path="/character-detail/:id" render={renderCharacter}></Route>
       </Switch>
     </div>
   );
 };
-
+App.propTypes = {
+  filteredCharacters: PropTypes.array,
+};
 export default App;

@@ -3,16 +3,24 @@ import '../stylesheet/App.scss';
 
 const Filters = (props) => {
   const handleFilter = (ev) => {
-    // console.log(ev.target.value);
     props.handleFilter(ev.target.value);
+  };
+  const handleFormSubmit = (ev) => {
+    ev.preventDefault();
   };
 
   return (
-    <form>
+    <form onSubmit={handleFormSubmit}>
       <label className="label" htmlFor="name">
-        Search by character:
+        Busca un personaje:
       </label>
-      <input className="input" type="text" id="name" onChange={handleFilter} />
+      <input
+        className="input"
+        type="text"
+        id="name"
+        value={props.filterName}
+        onChange={handleFilter}
+      />
     </form>
   );
 };

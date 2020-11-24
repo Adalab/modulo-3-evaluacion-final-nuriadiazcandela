@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  width: 175px;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: rgb(80, 80, 231);
+  border: 5px solid cadetblue;
+}
+.card-img {
+  width: 173px;
+  height: 173px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+.card-title {
+  // display: block;
+  margin: 0;
+  padding: 2px;
+  font-size: 20px;
+  color: white;
+}
