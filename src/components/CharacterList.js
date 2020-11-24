@@ -24,7 +24,7 @@ const CharacterList = (props) => {
     );
   });
   return (
-    <div>
+    <div className="list-container">
       <ul className="cards">{characterElement}</ul>
     </div>
   );

@@ -28,7 +28,7 @@ const App = () => {
   });
 
   const renderCharacter = (props) => {
-    const routeCharacterId = parseInt(props.match.params.id);
+    const routeCharacterId = parseInt(props.match.params.characterId);
     const foundCharacter = characters.find((character) => {
       return routeCharacterId === character.id;
     });
@@ -39,9 +39,9 @@ const App = () => {
           image={foundCharacter.image}
           name={foundCharacter.name}
           status={foundCharacter.status}
-          species={foundCharacter.species}
-          origin={foundCharacter.origin}
-          episodes={foundCharacter.epidose}
+          species={foundCharacter.specie}
+          origin={foundCharacter.planet}
+          episodes={foundCharacter.episodes.length}
         ></CharacterDetail>
       );
     } else {
@@ -62,11 +62,12 @@ const App = () => {
           <Filters handleFilter={handleFilter} filterName={filterName} />
           <CharacterList characters={filteredCharacters} />
         </Route>
-        <Route path="/character-detail/:id" render={renderCharacter}></Route>
+        <Route path="/character-detail/:characterId" render={renderCharacter}></Route>
       </Switch>
     </div>
   );
 };
+
 App.propTypes = {
   filteredCharacters: PropTypes.array,
 };

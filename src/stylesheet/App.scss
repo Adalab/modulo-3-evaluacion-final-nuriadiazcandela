@@ -1,9 +1,19 @@
-.App {
-  text-align: center;
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.list-container {
+  height: 100%;
 }
 .cards {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
   display: flex;
@@ -16,23 +26,20 @@
   border: 5px solid cadetblue;
 }
 .card-img {
-  width: 173px;
-  height: 173px;
-  border-radius: 16px;
+  width: 165px;
+  height: 165px;
+  border-radius: 15px;
   margin-bottom: 10px;
 }
 .card-title {
-  // display: block;
   margin: 0;
-  padding: 2px;
+  padding: 1px;
   font-size: 20px;
   color: white;
 }
-
 .card-description {
-  display: block;
   margin: 0;
-  padding: 2px;
+  padding-bottom: 5px;
   font-size: 15px;
   color: aliceblue;
 }
@@ -47,18 +54,53 @@
 }
 .input {
   margin-bottom: 16px;
-  height: 22px;
+  height: 25px;
   width: 290px;
   font-family: 'Rajdhani', sans-serif;
   font-size: 20px;
   text-align: center;
   font-weight: 700;
+  border-color: rgb(172, 236, 22);
 }
 .link {
   text-decoration: none;
 }
-.nofound {
-}
+
 .imgnofound {
   width: 600px;
+}
+
+.card-img-detail {
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 50%;
+}
+.description {
+  list-style: none;
+  font-size: 22px;
+}
+.button-container .btn {
+  width: 90px;
+  height: 40px;
+  margin: 20px;
+  background-color: rgb(50, 182, 200);
+  color: rgb(37, 37, 63);
+  font-weight: 700;
+  font-size: 18px;
+  border: 2px solid rgb(179, 236, 21);
+}
+.detail-container {
+  background-color: rgb(48, 146, 236);
+  border: 5px solid rgb(179, 236, 21);
+  display: block;
+  margin: auto;
+  width: 30%;
+  height: 30%;
+  border-radius: 15px;
+  font-weight: 500;
+}
+.char-name {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-decoration: underline;
 }

@@ -1,29 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheet/CharacterDetail.scss';
+import '../stylesheet/App.scss';
 import PropTypes from 'prop-types';
 
 const CharacterDetail = (props) => {
-  console.log(props);
   return (
-    <div className="card-detail" key={props.id}>
-      <Link to="/">
-        <button className="btn">Volver</button>
-      </Link>
-      <div>
-        <div className="card_detail">
-          <img className="card-img-detail" src={props.image} alt={props.name} />
-          <h2>{props.name}</h2>
-          <section>
-            <ul className="description">
-              <li>Especie:{props.species}</li>
-              <li>Planeta de origen:{props.origin}</li>
-              <li>Aparece en: {props.episodes} episodios</li>
-              <li>Estatus: {props.status}</li>
-            </ul>
-          </section>
-        </div>
+    <div className="detail-container" key={props.id}>
+      <div className="button-container">
+        <Link to="/">
+          <button className="btn">Volver</button>
+        </Link>
       </div>
+      <section className="card-detail">
+        <img
+          className="card-img-detail"
+          src={props.image}
+          alt={props.name}
+          title={`Imagen de ${props.name}`}
+        />
+        <h2 className="char-name">{props.name}</h2>
+        <ul className="description">
+          <li>Especie: {props.species}.</li>
+          <li>Planeta de origen: {props.origin}.</li>
+          <li>Aparece en: {props.episodes} episodios.</li>
+          <li>Estatus: {props.status}.</li>
+        </ul>
+      </section>
     </div>
   );
 };
