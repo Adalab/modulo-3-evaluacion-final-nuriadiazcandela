@@ -19,12 +19,14 @@
   width: 173px;
   height: 173px;
   border-radius: 16px;
+  margin-bottom: 10px;
 }
 .card-title {
   // display: block;
   margin: 0;
   padding: 2px;
   font-size: 20px;
+  color: white;
 }
 
 .card-description {
@@ -32,4 +34,26 @@
   margin: 0;
   padding: 2px;
   font-size: 15px;
+  color: aliceblue;
+}
+.label {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  color: rgb(172, 236, 22);
+}
+.input {
+  margin-bottom: 16px;
+  height: 22px;
+  width: 290px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+.link {
+  text-decoration: none;
 }
