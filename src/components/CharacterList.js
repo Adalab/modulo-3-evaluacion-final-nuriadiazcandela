@@ -7,7 +7,7 @@ const CharacterList = (props) => {
   if (props.characters.length === 0) {
     return (
       <div>
-        <p>No se encuentran resultados</p>
+        <p className="no-results">No se encuentran resultados</p>
         <img src={image} alt="No hay resultados" title="No hay resultados" />
       </div>
     );
