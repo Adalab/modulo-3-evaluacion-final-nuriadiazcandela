@@ -24,6 +24,9 @@
   border-radius: 20px;
   background-color: rgb(80, 80, 231);
   border: 5px solid cadetblue;
+  &:hover {
+    border: 5px solid rgb(172, 236, 22);
+  }
 }
 .card-img {
   width: 165px;
@@ -91,6 +94,9 @@
   font-weight: 700;
   font-size: 18px;
   border: 2px solid rgb(179, 236, 21);
+  &:hover {
+    color: white;
+  }
 }
 .detail-container {
   background-color: rgb(48, 146, 236);
