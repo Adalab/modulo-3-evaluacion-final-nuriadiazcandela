@@ -27,10 +27,12 @@ const App = () => {
     setFilterName(filterName);
   };
 
+  //Filtro personajes
   const filteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
 
+//Buscar personajes
   const renderCharacter = (props) => {
     const routeCharacterId = parseInt(props.match.params.characterId);
     const foundCharacter = characters.find((character) => {
