@@ -5,6 +5,14 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  @media all and (max-width: 768px) {
+    margin: auto;
+  }
+}
+.logo {
+  @media all and (max-width: 768px) {
+    width: 70%;
+  }
 }
 .label {
   display: block;
@@ -31,10 +39,6 @@
 
 .imgnofound {
   width: 600px;
-}
-.no-results {
-  font-size: 30px;
-  font-weight: 600;
 }
 
 .footer {

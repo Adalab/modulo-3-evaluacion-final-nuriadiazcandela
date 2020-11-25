@@ -9,7 +9,12 @@ const CharacterList = (props) => {
     return (
       <div>
         <p className="no-results">No se encuentran resultados</p>
-        <img src={image} alt="No hay resultados" title="No hay resultados" />
+        <img
+          className="no-results__img"
+          src={image}
+          alt="No hay resultados"
+          title="No hay resultados"
+        />
       </div>
     );
   }
