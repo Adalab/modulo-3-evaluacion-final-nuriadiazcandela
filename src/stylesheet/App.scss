@@ -6,46 +6,6 @@
   align-items: center;
   padding: 20px;
 }
-.list-container {
-  height: 100%;
-}
-.cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.card {
-  display: flex;
-  width: 175px;
-  flex-direction: column;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  background-color: rgb(80, 80, 231);
-  border: 5px solid cadetblue;
-  &:hover {
-    border: 5px solid rgb(172, 236, 22);
-  }
-}
-.card-img {
-  width: 165px;
-  height: 165px;
-  border-radius: 15px;
-  margin-bottom: 10px;
-}
-.card-title {
-  margin: 0;
-  padding: 1px;
-  font-size: 20px;
-  color: white;
-}
-.card-description {
-  margin: 0;
-  padding-bottom: 5px;
-  font-size: 15px;
-  color: aliceblue;
-}
 .label {
   display: block;
   margin: 10px;
@@ -76,40 +36,10 @@
   font-size: 30px;
   font-weight: 600;
 }
-.card-img-detail {
-  margin-top: 20px;
-  border-radius: 10px;
-  width: 50%;
-}
-.description {
-  list-style: none;
-  font-size: 22px;
-}
-.button-container .btn {
-  width: 90px;
-  height: 40px;
-  margin: 20px;
-  background-color: rgb(50, 182, 200);
-  color: rgb(37, 37, 63);
-  font-weight: 700;
-  font-size: 18px;
-  border: 2px solid rgb(179, 236, 21);
-  &:hover {
-    color: white;
-  }
-}
-.detail-container {
-  background-color: rgb(48, 146, 236);
-  border: 5px solid rgb(179, 236, 21);
-  display: block;
-  margin: auto;
-  width: 30%;
-  height: 30%;
-  border-radius: 15px;
-  font-weight: 500;
-}
-.char-name {
-  text-transform: uppercase;
-  font-size: 30px;
-  text-decoration: underline;
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  font-size: 14px;
+  margin: 15px;
 }

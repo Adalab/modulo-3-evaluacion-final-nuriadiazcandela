@@ -8,17 +8,21 @@ import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import nofound from '../images/404.png';
 import PropTypes from 'prop-types';
+import Footer from './Footer';
 
 const App = () => {
+  //Estados
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState('');
 
+  //Gestionar API
   useEffect(() => {
     getDataFromApi().then((data) => {
       setCharacters(data);
     });
   }, []);
 
+  //Manejadora del input
   const handleFilter = (filterName) => {
     setFilterName(filterName);
   };
@@ -64,6 +68,7 @@ const App = () => {
         </Route>
         <Route path="/character-detail/:characterId" render={renderCharacter}></Route>
       </Switch>
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  width: 175px;
+  flex-direction: column;
+  margin: 0 20px 20px 0;
+  border-radius: 20px;
+  background-color: rgb(80, 80, 231);
+  border: 5px solid cadetblue;
+  &:hover {
+    border: 5px solid rgb(172, 236, 22);
+  }
+  &--img {
+    width: 165px;
+    height: 165px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  &--title {
+    margin: 0;
+    padding: 1px;
+    font-size: 20px;
+    color: white;
+  }
+  &--description {
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 15px;
+    color: aliceblue;
+  }
+}

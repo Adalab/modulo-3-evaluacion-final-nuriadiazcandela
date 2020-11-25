@@ -2,6 +2,7 @@ import React from 'react';
 import CharacterCard from './CharacterCard.js';
 import PropTypes from 'prop-types';
 import image from '../images/logoverde.png';
+import '../stylesheet/CharacterList.scss';
 
 const CharacterList = (props) => {
   if (props.characters.length === 0) {
@@ -25,7 +26,7 @@ const CharacterList = (props) => {
   });
   return (
     <div className="list-container">
-      <ul className="cards">{characterElement}</ul>
+      <ul className="list-container__cards">{characterElement}</ul>
     </div>
   );
 };
