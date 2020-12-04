@@ -1,4 +1,4 @@
- # Rick and Morty character finder ☺️ # 
+ # Rick and Morty character finder <img src="https://i.pinimg.com/originals/e1/19/b6/e119b69406cf336c04f66e2b16aea6ba.jpg" width="50px">
 *Ejercicio de evaluación final de programación con el framework React para el módulo 3 de Adalab*
 
 El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje.
